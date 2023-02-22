@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: black; /* -------- Colocar cor green para vizualizar melhor, correto é Black */
+    list-style: none;
+    text-decoration: none;
+}
+
+header {       /* --------------- Dentro do Header só há dois itens, a Imagem e o Nav */
+    height: 90px;
+    display: flex;
+    justify-content: space-around; /* ---------- Coloca o Logo ao lado da Nav onde fica os Menus */
+    align-items: center;
+    background-color: black; /* ----------- Colocar cor Aqua para vizualizar melhor,  correto é Black
+ */
+
+}
+
+nav {
+    width: 60%;  /* ------- Aumentamos a Nav para depois caber o nome dos menus um ao lado do outro */
+}
+
+ul {
+    display: flex;
+    justify-content: space-between; /* ---- Organiza os itens filhos (li) colando o primeiro na direita e pondo espaços entre eles */
+    width: 100%; /* ------ Esticamos a Ul para ela ficar com 100% do tamanho do pai dela, ou seja, o tamanho da Nav */
+    }
+
+li {
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer; /* ------- Seleciona o tipo de cursos que vai aparecer ao posicionar o Mouse (interrogação, aguardar, agarrar...) */
+    font-size: 19px;
+    transform: .5s;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+        
+}
+
+li:hover {
+    color: #d21617;
+}
+
+#logo {
+    width: 150px; /* ------ Estilizamos a Logo para um tamanho adequado, demos a largura e colocamos a altura de forma automática */
+    height: auto;
+}
+
+#banner {
+    background-image: url('https://pbs.twimg.com/media/FBwJWeQXIAItfyH?format=jpg&name=large'); /* --- Botão direito e "Copiar Endereeço da Imagem" */
+    background-position: 50% 50%; /* ----- Centraliza a imagem , mas às vezesm com o Cover, nem preicsa*/
+    background-size: cover; /* ---- Estica a imagem para que ela caiba nas dimensões desejadas */
+    width: 100%; /* ---- Largura de 100% da tela (se a imagem não for grande, ela vai se repetir) */
+    height: 500px; /* ------- Altura da imagem, se ela for pequena, irá se repetir */
+}
+
+#trailer-container { /* ---- Esse é o Flex Container onde colocaremos o Trailer */
+    width: 100%;
+    height: 400px; /* --- Sei o que é, mas não sei bem a necessidade */
+    display: flex;
+    justify-content: center; /* ------ Serve para Alinhar o Content ao centro da página. O Content em si não é nada, mas o conteúdo dele é importante (Vídeo + botão + texto) */
+    /* background-color: aqua;  *//* ----- Só para ver melhor a área que estamos trabalhando */
+}
+
+.content {
+    width: 80%;
+    display: flex;   
+    align-items: center;  /* --- Coloca o conteúdo que já está no centro da página, centralizado entre si (nada em baixo do outro) */ 
+    justify-content: space-between;
+}
+
+.trailer {
+    width: 50%; /* ------- Deixa o trailer com metade do tamanho do content:  */
+}
+
+#sinopse {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.description {
+    color: #fff;
+    font-size: 19px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: 70%;
+}
+
+.button {
+    width: 200px;
+    height: 60px;
+    background-color: #d21617;
+    color: #fff;
+    padding: 8px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .8s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center; /* ----- Alinha o texto do botão na horizontal */
+    align-items: center;  /* ----- Alinha o texto do botão na vertical */
+    font-weight: bold;
+    border: none; /* ------- botão sem borda */
+    outline: none; /* --- mini borda preta que aparece quando clicamos no botão, no caso, desabilitada */
+    margin-top: 25px;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.actor-cards-container { /* ------ Div teórica, serve mais para agupar tudo e criar o flex container */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* ----- Centralizou o Cads-Content */
+    margin-top: 50px; /* ---- Distância para não colar no vídeo nem no botão */
+}
+
+.cards-content {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /* --- Colocamos os cards em três colunas iguais */
+    row-gap: 20px; /* --- espaço entre as linhas (mas quais?) */
+    column-gap: 40px; /* ---- espaço entre as colunas */
+}
+
+.card { /* ---Estiliza-se aqui todos os Cards de forma geral, depois, cada Card terá uma estilização própria */
+    width: 100%; /* --- 100% da largura da coluna */
+    height: 600px;
+    background-size: cover; /* ------imagem ocupa todo o espaço */
+    background-position: 50% 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s; /* ----para quando adicionarmos o hover */
+    display: flex;
+    flex-direction: column; /* --- O professor usou o Colum e depois o flex end, mas poderia ter usado só o column reverse */
+    justify-content: flex-end; /* ---- como estamos usando o flez direction em clum, o felz ende vai deixar o conteúdo da Div no pé da imagem */
+    padding: 0 0 20px 20px; /* --- Para o conteúdo da div (nome do ator) descolar do fundo e da direita da coluna */
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.card:hover {
+    transform: scale(1.02);
+   
+}
+
+.banner01 {
+    background-image: url(https://portalpopline.com.br/wp-content/uploads/2022/02/batman-trilogia2.jpg);
+}
+
+.banner02 {
+    background-image: url(https://pbs.twimg.com/media/FMO83fmWYAMYttY?format=jpg&name=900x900);
+}
+
+.banner03 {
+    background-image: url(https://images.squarespace-cdn.com/content/v1/51b3dc8ee4b051b96ceb10de/07c53b1e-7aee-477d-8d45-c16c080faa75/new-featurette-for-the-batman-offers-additional-details-on-jeffrey-wrights-jim-gordon.jpg);
+}
+
+footer {
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+ 
+}
+
+span {
+   color: #fff;
+   font-family: 'Kdam Thmor Pro', sans-serif;
+   
+}
+
+.Adriel {
+    font-style: italic;
+    font-size: 10px;
+}
+
+.footer-navegation {
+    display: none; /* ----Não vai aparecer, só será visível na Responsavidade, somente em Celulares */
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* -------------------------- RESPONSIVIDADE -------------------------- */
+
+@media (max-width: 768px){
+    .footer-navegation {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #banner {
+        background-position: 80%;
+    }
+    #trailer-container {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        /* flex-direction: column; */ /* ------- ANALIZAR ISSO AQUI, COLOQUEI CENTER E O PROF COLUM, ACHO O MEU MELHOR, O VÍDEO NÃO FICA SOBRE O BANNER */
+    }
+    .content {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trailer {
+        width: 100%;
+    }
+
+    #sinopse {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-content: center;
+
+    }
+   
+    .description {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .cards-content {
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+    }
+}
+
+

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: black; /* -------- Colocar cor green para vizualizar melhor, correto é Black */
+    list-style: none;
+    text-decoration: none;
+}
+
+header {       /* --------------- Dentro do Header só há dois itens, a Imagem e o Nav */
+    height: 90px;
+    display: flex;
+    justify-content: space-around; /* ---------- Coloca o Logo ao lado da Nav onde fica os Menus */
+    align-items: center;
+    background-color: black; /* ----------- Colocar cor Aqua para vizualizar melhor,  correto é Black
+ */
+
+}
+
+nav {
+    width: 60%;  /* ------- Aumentamos a Nav para depois caber o nome dos menus um ao lado do outro */
+}
+
+ul {
+    display: flex;
+    justify-content: space-between; /* ---- Organiza os itens filhos (li) colando o primeiro na direita e pondo espaços entre eles */
+    width: 100%; /* ------ Esticamos a Ul para ela ficar com 100% do tamanho do pai dela, ou seja, o tamanho da Nav */
+    }
+
+li {
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer; /* ------- Seleciona o tipo de cursos que vai aparecer ao posicionar o Mouse (interrogação, aguardar, agarrar...) */
+    font-size: 19px;
+    transform: .5s;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+        
+}
+
+li:hover {
+    color: #d21617;
+}
+
+#logo {
+    width: 150px; /* ------ Estilizamos a Logo para um tamanho adequado, demos a largura e colocamos a altura de forma automática */
+    height: auto;
+}
+/* ---------------------------------------------------------- */
+
+.linha {
+    width: 100%;
+    height: 10px;
+    background-color: #d21617;
+    margin-bottom: 20px;
+}
+
+.actor-cards-container { 
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    margin-top: 50px; 
+    
+}
+
+.cards-content {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr); 
+    row-gap: 20px; 
+    column-gap: 40px; 
+}
+
+.card { 
+    width: 100%; 
+    height: 300px;
+    background-size: cover; 
+    background-position: 50% 10%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end; 
+    padding: 0 0 20px 20px; 
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.card:hover {
+    transform: scale(1.02);
+   
+}
+
+.banner01 {
+    
+    background-image: url(https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2021/10/17/708985444-batman-foto-nova-robert-pattinson-divulgacao-warner.jpg);
+}
+
+.banner02 {
+    background-image: url(https://i.pinimg.com/736x/0a/a6/61/0aa66140c3d0bde86a8de619f1bf11da.jpg);
+}
+
+.banner03 {
+    background-image: url(https://i.pinimg.com/originals/37/09/75/37097595bb27e83ac8acb0b102fe1c37.jpg);
+
+}
+
+.banner04 {
+    background-image: url(https://img.olhardigital.com.br/wp-content/uploads/2022/02/Charada-em-The-Batman.jpg.webp);
+}
+
+.banner05 {
+    background-image: url(https://cosmonerd.com.br//uploads/2021/07/the-batman-capa-cosmo-2.jpg);
+}
+
+.banner06 {
+    background-image: url(https://getyourcomicon.co.uk/wp-content/uploads/2022/02/TheBatman-Alfred-Header.jpg);
+
+}
+
+.banner07 {
+    background-image: url(https://d2d7ho1ae66ldi.cloudfront.net/ArquivoNoticias/69fbe1c4-9efb-11ec-aa6e-9587410378a2/john-turturro.jpg);
+}
+
+.banner08 {
+    background-image: url(https://epipoca.com.br/wp-content/uploads/2020/12/matt-reeves.jpeg);
+}
+
+
+/* ------------------------------------------------------- */
+footer {
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+ 
+}
+
+span {
+   color: #fff;
+   font-family: 'Kdam Thmor Pro', sans-serif;
+   
+}
+
+.Adriel {
+    font-style: italic;
+    font-size: 10px;
+}
+
+.footer-navegation {
+    display: none; /* ----Não vai aparecer, só será visível na Responsavidade, somente em Celulares */
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px){
+    .footer-navegation {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .cards-content {
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+    }
+}
